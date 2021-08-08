@@ -1,0 +1,43 @@
+{
+  "firstName": "John",
+  "lastName": "McClane",
+  "age": "28",
+  "address": {
+    "street": "street1",
+    "city": "city1",
+    "state": "state1",
+    "country": "country1",
+    "postalCode": "12345"
+  },
+  "plugin": {
+    "acc": {
+      "data": {
+        "point": 54
+      }
+    }
+  },
+  "Phones": [
+    {
+      "Mobile": "111-111-1111",
+      "sec": {
+        "code": 547
+      }
+    },
+    {
+      "Home": "222-222-2222"
+    }
+  ],
+  "a": [
+    {
+      "b": "sas",
+      "c": [
+        {
+          "d": "val"
+        },
+        {
+          "e": " val2"
+        }
+      ]
+    }
+  ]
+}
