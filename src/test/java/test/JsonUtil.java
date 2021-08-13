@@ -48,8 +48,6 @@ public class JsonUtil {
 
 				temp = (JsonObject) points.get(row);
 
-		
-
 			} // non array
 			else {
 
