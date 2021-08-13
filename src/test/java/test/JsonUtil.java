@@ -15,6 +15,7 @@ public class JsonUtil {
 
 		if (newValue.equalsIgnoreCase("blank"))
 			return;
+		
 		String[] trav = attribute.split("\\.");
 
 		// update in outer part
@@ -28,9 +29,15 @@ public class JsonUtil {
 		boolean lastcovered = false;
 		JsonObject temp = jsonObject;
 		// iterate to the last and update
-		for (int i = 0; i < trav.length - 1; i++) {
-			if (lastcovered)
-				break;
+		for (int i = 0; i <trav.length ; i++) {
+		
+			// if next is last
+			if (i  == trav.length - 1) {
+				temp.remove(trav[i ]);
+				temp.addProperty(trav[i ], newValue);
+				return;
+			}
+			
 			// array element
 			if (trav[i].contains("[")) {
 				String[] arr = trav[i].split("\\[", 2);
@@ -41,27 +48,10 @@ public class JsonUtil {
 
 				temp = (JsonObject) points.get(row);
 
-				// if next is last
-				if (i + 1 == trav.length - 1) {
-					temp.remove(trav[i + 1]);
-					temp.addProperty(trav[i + 1], newValue);
-					lastcovered = true;
-					break;
-				}
-
 			} // non array
 			else {
 
 				temp = (JsonObject) temp.get(trav[i]);
-
-				// if next is last
-				if (i + 1 == trav.length - 1) {
-					temp.remove(trav[i + 1]);
-					temp.addProperty(trav[i + 1], newValue);
-					lastcovered = true;
-					break;
-				}
-
 			}
 
 		}
