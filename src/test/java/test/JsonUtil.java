@@ -48,7 +48,7 @@ public class JsonUtil {
 
 				temp = (JsonObject) points.get(row);
 
-			} // non array
+			} // non array element
 			else {
 
 				temp = (JsonObject) temp.get(trav[i]);
