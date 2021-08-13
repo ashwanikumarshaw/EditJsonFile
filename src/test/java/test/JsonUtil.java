@@ -53,8 +53,6 @@ public class JsonUtil {
 
 				temp = (JsonObject) temp.get(trav[i]);
 
-			
-
 			}
 
 		}
