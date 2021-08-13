@@ -34,9 +34,13 @@ public class jsonHandle {
 		String scenario = "a001";
 		Map<String, String> m = new HashMap<>();
 
-		m.put("Attibute", "plugin.acc.data.point");
-		// test : firstName Phones[0].sec.code plugin.acc.data.point Phones[0].Mobile
-		// a[0].c[1].e a1.b1[0].d[0].e
+		m.put("Attibute", "Phones[0].sec.code");
+		// test : firstName
+		// Phones[0].sec.code
+		// plugin.acc.data.point
+		// Phones[0].Mobile
+		// a[0].c[1].e
+		// a1.b1[0].d[0].e
 		m.put(scenario, "Ashwani");
 		JsonUtil.updateJson(m, jsonObject, scenario);
 
