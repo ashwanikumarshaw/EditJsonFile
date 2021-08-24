@@ -19,7 +19,7 @@ public class jsonHandle {
 
 		String path = "D:\\INSTALL\\QAE\\eclipse_Workspace\\editJson\\src\\test\\java\\inputfile\\input0.json";
 		//path="D:\\INSTALL\\QAE\\eclipse_Workspace\\editJson\\src\\test\\java\\inputfile\\input1.json";
-		
+		 
 		File inputFile = new File(path);
 
 		String reader = null;
