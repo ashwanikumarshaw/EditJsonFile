@@ -34,20 +34,23 @@ public class UseingJsonPath {
 
 		$.store.book[?(@.price &lt; 10)].title
 		 */
-		String path = "C:\\Users\\ashwa\\git\\EditJsonFile\\src\\test\\java\\inputfile\\store.json";
+		String path = "C:\\Users\\ashwa\\git\\EditJsonFile\\src\\test\\java\\inputfile\\input3.json";
 		 
 		File inputFile = new File(path);
 
 		String reader =  FileUtils.readFileToString(inputFile, StandardCharsets.UTF_8);
 		
-		Object dataObject = JsonPath.parse(reader).read("$['store']['book'][*].['title']");
-		String dataString = dataObject.toString();
-		
-		System.out.println(dataString);
+//		Object dataObject = JsonPath.parse(reader).read("$['store']['book'][*].['title']");
+//		String dataString = dataObject.toString();
+//		
+//		System.out.println(dataString);
 		//Update
 		DocumentContext json = JsonPath.parse(reader);
-	    String jayPath = "$..book[0].author";
+	    String jayPath = "$..point";
 	    String tagValue = "ReplacedText";
+	    System.out.println(json.set(jayPath, tagValue).jsonString());
+	     jayPath = "$['point']";
+	     tagValue = "Ashwani Kumar Shaw";
 	    System.out.println(json.set(jayPath, tagValue).jsonString());
 		
 		
