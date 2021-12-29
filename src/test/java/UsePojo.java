@@ -12,12 +12,10 @@ import test.responsePOJO;
 import test.responsePOJO.*;
 
 public class UsePojo {
-	static responsePOJO res1=new responsePOJO();
+	static responsePOJO res=new responsePOJO();
 	@SneakyThrows
 	public static void setValue(String name,String Roll,String subname,String grade,ArrayList<Map<String,String>> Mark) {
 		
-		
-		responsePOJO res=new responsePOJO();
 		res.setName(name);
 		res.setRoll(Roll);
 		res.setSub(new ArrayList<Subject>());
@@ -63,14 +61,14 @@ public class UsePojo {
 		
 		
 		
-		responsePOJO.Subject sub =res1.new Subject();
+		responsePOJO.Subject sub =res.new Subject();
 		sub.setGrade(grade);
 		sub.setSubname(subname);
 		sub.setMark(new ArrayList<Marks>());
 		
 		ArrayList<Marks> ArrMark=new ArrayList<>();
 		for(int i=0;i<Mark.size();i++) {
-			responsePOJO.Marks mark = res1.new Marks();
+			responsePOJO.Marks mark = res.new Marks();
 			mark.setScore(Mark.get(i).get("score"));
 			mark.setSem(Mark.get(i).get("sem"));
 
