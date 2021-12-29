@@ -1,3 +1,4 @@
+package test.pojoway;
 import java.io.File;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
@@ -8,8 +9,7 @@ import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
 
 import lombok.SneakyThrows;
-import test.responsePOJO;
-import test.responsePOJO.*;
+import test.pojoway.responsePOJO.*;
 
 public class UsePojo {
 	static responsePOJO res=new responsePOJO();
@@ -98,7 +98,7 @@ public class UsePojo {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//setValue("Ashu", "05", "Maths", "A", "4th", "85");
+
 		ArrayList<Map<String,String>> Mark=new ArrayList<>();
 		Map<String,String> mark=new HashMap<String, String>();
 		mark.put("sem", "1st");
